@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Typewriter effect</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: Lato, sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: 0.1em;
+    margin: 0 auto;
+}
+
+.typewriter::before {
+    content: "";
+    animation: typing 5s forwards steps(20, end);
+}
+
+.typewriter::after {
+    content: "";
+    display: inline-block;
+    background-color: blue;
+    margin-left: 0.1em;
+    width: 8px;
+    height: 1.5em;
+    vertical-align: bottom;
+    animation: blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    0%,  5%   { content: ""; }
+    5%,  10%  { content: "T"; }
+    10%, 15%  { content: "Ty"; }
+    15%, 20%  { content: "Typ"; }
+    20%, 25%  { content: "Type"; }
+    25%, 30%  { content: "Typew"; }
+    30%, 35%  { content: "Typewr"; }
+    35%, 40%  { content: "Typewri"; }
+    40%, 45%  { content: "Typewrit"; }
+    45%, 50%  { content: "Typewrite"; }
+    50%, 55%  { content: "Typewriter"; }
+    55%, 60%  { content: "Typewriter "; }
+    60%, 65%  { content: "Typewriter e"; }
+    65%, 70%  { content: "Typewriter ef"; }
+    70%, 75%  { content: "Typewriter eff"; }
+    75%, 80%  { content: "Typewriter effe"; }
+    80%, 85%  { content: "Typewriter effec"; }
+    85%, 90%  { content: "Typewriter effect"; }
+    90%, 95%  { content: "Typewriter effect."; }
+    95%, 100% { content: "Typewriter effect."; }
+}
+
+@keyframes blink-caret {
+    from, to { background-color: transparent; }
+    50% { background-color: blue; }
+}
+
+@media (prefers-reduced-motion) {
+    .typewriter::after {
+        animation: none;
+    }
+
+    @keyframes sequencePopup {
+        from { content: ""; }
+        to   { content: "Typewriter effect."; }
+        50%  { content: "Typerwriter" }
+    }
+
+    .typewriter::before {
+        content: "";
+        animation: sequencePopup 6s forwards linear;
+    }
+}
+</style>
+</head>
+<body>
+  <h1 aria-label="Typewriter effect.">
+      <span class="typewriter"></span>
+  </h1>
+</body>
+</html>
