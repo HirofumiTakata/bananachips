@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Checked Background</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+body { 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.bg {
+    width: 600px;
+    height: 600px;
+    background:
+        conic-gradient(
+        white 90deg,
+        dodgerblue 90deg 180deg,
+        white 180deg 270deg,
+        dodgerblue 270deg
+            )
+    top left / 10% 10% repeat;
+}
+        </style>
+    </head>
+    <body>
+        <h1>Checked Background</h1>
+        <div class="bg"></div>
+    </body>
+</html>
