@@ -1,4 +1,4 @@
-![BananaChips](./shared/img/bananas.png "Fruit icons")
+![BananaChips](./shared/img/bananas.png "Fruit icons")  
 [Fruit icons created by Icongeek26 - Flaticon](https://www.flaticon.com/free-icons/fruit)
 
 ## Top
